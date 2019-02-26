@@ -7,8 +7,8 @@
     let script = document.createElement('script')
     document.body.appendChild(script)
     script.src='pay'
-    script.onerror=function(){
-        alert('打钱失败')
+    script.onload=function(e){
+        e.currentTarget.remove()
     }
 })
 
