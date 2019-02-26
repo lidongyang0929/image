@@ -45,8 +45,10 @@ var server = http.createServer(function(request, response){
    var newAmount = amount - 1
    fs.writeFileSync('./db',newAmount)
    response.statusCode = 200
-   response.write(fs.readFileSync('./picture.jpeg'))
-   response.write('success')
+   response.write(`
+      alert("打钱成功")
+      amount.innerText = amount.innerText - 1`)
+   
    response.end()
 }
 
