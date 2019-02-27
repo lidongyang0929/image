@@ -13,7 +13,7 @@
             amount.innerText = amount.innerText - 1
         }else{}
     }
-    script.src='http://127.0.0.1/pay?callback=' + functionName
+    script.src='http://127.0.0.1：8888/pay?callback=' + functionName
     script.onload=function(e){
         e.currentTarget.remove()
         delete window[functionName]
