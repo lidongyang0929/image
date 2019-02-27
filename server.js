@@ -46,8 +46,8 @@ var server = http.createServer(function(request, response){
    fs.writeFileSync('./db',newAmount)
    response.statusCode = 200
    response.write(`
-      alert("打钱成功")
-      amount.innerText = amount.innerText - 1`)
+   ${query.callback}.call(undefined,'success')
+   `)
    
    response.end()
 }
